@@ -1,16 +1,4 @@
-- markdown syntax
-  - __file__
-  - **file**
-  - \__file__
-  - _\_file__
-  - __file\__
-  - __file_\_
-  - _file_
-  - \___file___
-  - _\__file__
-  - _\__file___
-  - \_\_file\_\_
-  
+
 
 # 발표자 : Live Coding   (엄청 잘함)
 윤찬식 (server serviec / android / **iphone** 개발가능) : android는 파편화 이슈가 매우 큼
