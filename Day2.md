@@ -111,8 +111,7 @@
   - verify()로 확인 : assertion대신 verify사용하고 이것은 EXPECT처럼 동작함. (fail되어도 stop하지 않음)
 
 - google mock을 이용한 같은 동작 (5분)
-  - 
-```cpp
+    ```cpp
 <gmock/gmock.h>
 <gtet/gtest.h>
 
@@ -131,7 +130,7 @@ void write(const std::string& message){
   for
 };
 
-```
+    ```
   - googletest/googlemock/scripts/generator/gmock_gen.py Target.h
     - 알아서 추가됨.
   - TEST(... {
