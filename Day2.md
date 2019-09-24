@@ -142,9 +142,53 @@
     - // act
     - add(mock1)
 - [Google Eample](https://github.com/imguru/GoogleTest_0722)  <- 위 수업과 같은 내용에 대한 google test version
--
--
--
+
+### mockito :  호출 여부 / 횟수/ 순서 (반드시 제공되어져야 하는 기능)
+- interface가 아닌 class에서도 사용할수 있다.   Point mokedPoint = mock(Point.class)
+- 행위 기반 검증 : 관찰해야 하는 상태가 변하지 않아 ,  호출 여부 등만 확인 필요할 때
+  - verify(mockedList).add("one");  // add("one")를 호출한 적이 있는가?  호출 여부만을 검증  
+- 호출 횟수 &  :  verify(mockedList,times(1)).add("once");  verify(mockedList,times(2)).add("twice");
+  - 기본 1번을 가정하므로 , 2번 호출되면 fail이다. 
+  - time(?)
+  - atLeast(N) : N번 이상
+  - atMost(N) : N번 이하
+  - verify(mockedList).add( anyString() ) : 인자 상관없이.    anyInt()
+    - google test는 add(_) 로 표시하면됨.
+- 호출 순서
+  - 일반적으로 순서를 확인하지 않습니다.
+  - InOrder 객체를 넣으면 순서를 확인한다.
+    - InOrder inOrder = inOrder(mockedList);    inOrder.verify(mockedList).add("first"); ....
+- stub 처리도 가능하다.
+- mockito에서는
+  - mock/ stub는 동일 합니다.  mock() , spy()
+  - mock은 실제로 호출이 발생하지 않고 , spy는 호출이 발생합니다.
+```cpp
+#include <stdio.h>
+
+class User {
+private : 
+int age;
+public:
+User(): age(42){}
+};
+
+#define private public    // 이렇게 넣으면 처리 public으로 처리 됨
+#define class struct
+#include "add.c"
+#include "User.h"
+class TestUser : public User {
+public 
+  using User::age;
+};
+
+int main(){
+User user;
+printf("%d\n",user.age);   // fail
+}
+```
+
+
 -
 - 기타
   - cppcon : cpp conference
+  
