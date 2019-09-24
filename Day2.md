@@ -204,5 +204,10 @@ printf("%d\n",user.age);   // fail
 
 
 ## 기타
-  - cppcon : cpp conference
+- cppcon : cpp conference
+- bullseye  : coverage tool instead of gcov
+- google test의 listener를 제공하여 , 각기 들어가는 단계마다의 callback을 등록하게 했다.  확장하게 좋게 되어져있다.
+  - RecordProperty는 XML output에 추가가되는 것이다.
+- TDD는 behaviour verification을 기준으로 하고 ,  mock을 해서 쓰는 것을 기본으로 한다.
+
   
