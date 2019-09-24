@@ -141,7 +141,7 @@
     - EXPECT_CALL(
     - // act
     - add(mock1)
--
+- [Google Eample](https://github.com/imguru/GoogleTest_0722)  <- 위 수업과 같은 내용에 대한 google test version
 -
 -
 -
