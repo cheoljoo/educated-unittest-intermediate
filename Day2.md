@@ -173,12 +173,12 @@ User(): age(42){}
 };
 
 #define private public    // 이렇게 넣으면 처리 public으로 처리 됨
-#define class struct
-#include "add.c"
+#define class struct      // class 처음에 default private인 것을 이용할때
+#include "add.c"        // add.c안에 함수 선언을 static 으로 했을때
 #include "User.h"
-class TestUser : public User {
+class TestUser : public User {    // User.h안에 protected로 선언된 것이 있을때
 public 
-  using User::age;
+  using User::age;    // 부모의 멤버 변수 / 함수의 접근 레벨을 변경하는 방법
 };
 
 int main(){
