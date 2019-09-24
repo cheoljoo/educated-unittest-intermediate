@@ -187,8 +187,22 @@ printf("%d\n",user.age);   // fail
 }
 ```
 
+## 정리 - effective unit test (SOLID 원칙)
+- 인터페이스 단일 책임의 원칙
+- 의존성 주입 방식 설계를 해야 한다.
+- MVC -> MVP / MVVM 로 변경
+  - MVC : M만 unit test 가능
+  - MVP : M P
+  - MVVM :  M VM 에 단위 test 적용 가능 - Data Binding을 통해 ~~~
+- 복잡한 private method를 피하라.  public method의 가독성을 높이기 위한 모듈의 역할로 제안
+- 정적 멤버 함수를 피하라.
+- new는 신중하게 사용하라. 
+- singleton을 피하라.
+- 상속보다는 컴포지션을 사용하라. 
+- 종속성을 줄여라.  객체 생성과 로직 수행을 분리하는 것이 좋다.  given when then처럼...
+- 생성자는 간단하게 만들어라.
 
--
-- 기타
+
+## 기타
   - cppcon : cpp conference
   
