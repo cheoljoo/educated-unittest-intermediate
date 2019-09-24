@@ -113,24 +113,24 @@
 - google mock을 이용한 같은 동작 (5분)
   - example
     ```cpp
-<gmock/gmock.h>
-<gtet/gtest.h>
+    <gmock/gmock.h>
+    <gtet/gtest.h>
 
-struct Target {
-virtual void write(const std::string& message) = 0;
-};
+    struct Target {
+    virtual void write(const std::string& message) = 0;
+    };
 
-class DLog {
-std::vector<Target*> targets;
+    class DLog {
+    std::vector<Target*> targets;
 
-public:
-void addTarget(Target* t) {
-  targets.push_back(t);
-}
-void write(const std::string& message){
-  for (Target* e : targets){
-  }
-};
+    public:
+    void addTarget(Target* t) {
+      targets.push_back(t);
+    }
+    void write(const std::string& message){
+      for (Target* e : targets){
+      }
+    };
 
     ```
   - googletest/googlemock/scripts/generator/gmock_gen.py Target.h
